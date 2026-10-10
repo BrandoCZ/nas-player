@@ -1,0 +1,35 @@
+name: Fehler melden
+description: Etwas funktioniert in NAS Player nicht wie erwartet
+labels: ["fehler"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Danke fürs Melden! Bitte schreibe **keine Passwörter, keine NAS-Adresse und keine persönlichen Daten** in dieses Formular. Issues sind öffentlich.
+  - type: textarea
+    id: was
+    attributes:
+      label: Was ist passiert?
+      description: Was hast du gemacht, was hast du erwartet, was ist stattdessen passiert?
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: App-Version
+      description: Zu finden über das Zeichen oben links in der App („Über NAS Player“).
+      placeholder: z. B. 0.1.0 (3)
+  - type: input
+    id: geraet
+    attributes:
+      label: iPhone-Modell und iOS-Version
+      placeholder: z. B. iPhone 16, iOS 26.1
+  - type: dropdown
+    id: modus
+    attributes:
+      label: Wo tritt es auf?
+      options:
+        - Demo-Modus
+        - Mit meinem NAS
+        - CarPlay
+        - Weiß nicht
