@@ -6,3 +6,5 @@ h1 { font-size: 2rem; line-height: 1.2; } h2 { margin-top: 2.2rem; font-size: 1.
 a { color: var(--akzent); } nav { display: flex; gap: 1.2rem; flex-wrap: wrap; padding-bottom: 1rem; border-bottom: 1px solid var(--linie); }
 footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--linie); font-size: .9rem; opacity: .8; }
 .logo { display: block; max-width: 18rem; margin: 1rem 0 1.5rem; }
+
+.lang { margin-left: auto; font-size: .9rem; } .lang a[aria-current] { font-weight: 700; text-decoration: none; }
