@@ -1,12 +1,12 @@
 # NAS Player
 
-**NAS Player** ist eine iPhone-App, die die eigene Musiksammlung (MP3 und M4A) von einem Synology-NAS mit Audio Station abspielt: streamen, auf dem iPhone speichern und offline hören (CarPlay folgt in einer späteren Version, sobald Apple es freigibt).
+**NAS Player** is an iPhone app that plays your own music collection (MP3 and M4A) from a Synology NAS running Audio Station: stream it, save it on your iPhone, and listen offline. It also works with CarPlay and Siri.
 
-In diesem Repository liegen **keine App-Quellen**. Es dient für:
+This repository contains **no app source code**. It is used for:
 
-- **Feedback und Fehlermeldungen:** über die [Issues](../../issues) (Vorlagen für Fehler und Wünsche)
-- **Support, Datenschutzerklärung und Impressum:** auf der Webseite zur App (GitHub Pages)
+- **Feedback and bug reports:** via [Issues](../../issues) (templates for bugs and feature requests)
+- **Support, privacy policy and legal notice:** on the app's website (GitHub Pages)
 
-Bitte schreibe in Issues **keine Zugangsdaten, keine Adresse deines NAS und keine persönlichen Daten**. Issues sind öffentlich.
+Please do **not** post credentials, your NAS address or personal data in issues. Issues are public.
 
-*NAS Player steht in keiner Verbindung zu Synology. Synology und Audio Station sind Marken der Synology Inc.*
+*NAS Player is not affiliated with Synology. Synology and Audio Station are trademarks of Synology Inc.*

@@ -1,0 +1,14 @@
+name: Feature request or idea
+description: An idea for NAS Player
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: Please do not post credentials or personal data. Issues are public.
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like to see?
+      description: Describe what you want to do and why.
+    validations:
+      required: true

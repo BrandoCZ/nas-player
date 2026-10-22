@@ -1,0 +1,34 @@
+name: Report a bug
+description: Something in NAS Player does not work as expected
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting! Please do **not** post passwords, your NAS address or personal data in this form. Issues are public.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you do, what did you expect, and what happened instead?
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: App version
+      description: You can find it via the icon at the top left of the app ("About NAS Player").
+      placeholder: e.g. 3.0 (70)
+  - type: input
+    id: device
+    attributes:
+      label: iPhone model and iOS version
+      placeholder: e.g. iPhone 16, iOS 26.1
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Where does it happen?
+      options:
+        - Demo mode
+        - With my NAS
+        - Not sure
