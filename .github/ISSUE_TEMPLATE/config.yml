@@ -1,1 +1,5 @@
 blank_issues_enabled: false
+contact_links:
+  - name: Support and FAQ
+    url: https://brandocz.github.io/nas-player/en/support.html
+    about: Answers to common questions, how to connect your NAS, and other ways to get in touch.
