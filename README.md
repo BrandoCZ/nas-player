@@ -23,7 +23,7 @@ NAS Player is an iPhone app that plays your own music collection (MP3 and M4A) f
 - Available in English, German, Czech, Spanish, Italian and French
 - No ads, no tracking, no accounts. Everything stays on your iPhone.
 
-See the [release notes](https://brandocz.github.io/nas-player/en/releases.html) for what each version brought.
+See the [release notes](https://brandocz.github.io/nas-player/en/releases.html) for what each version brought and [what is coming next](https://brandocz.github.io/nas-player/en/upcoming.html).
 
 ## Feedback and support
 
