@@ -19,6 +19,7 @@ NAS Player is an iPhone app that plays your own music collection (MP3 and M4A) f
 - Browse and stream your whole library without downloading everything
 - Download albums, artists or songs to the iPhone for offline listening, with a storage limit
 - Favorites, your own playlists, shuffle and repeat, sleep timer, statistics and a year in review
+- Favorites sync with your NAS (optional), AirPlay, song lyrics, and playback speed for audiobooks
 - CarPlay and Siri support
 - Available in English, German, Czech, Spanish, Italian and French
 - No ads, no tracking, no accounts. Everything stays on your iPhone.
