@@ -11,3 +11,18 @@ footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--linie)
 
 .store a { display: inline-block; padding: .6rem 1.1rem; border-radius: .8rem; background: var(--akzent); color: var(--grund); font-weight: 600; text-decoration: none; }
 code { font-size: .92em; word-break: break-all; }
+
+main.home { max-width: 54rem; }
+.hero { text-align: center; padding: 1.2rem 0 .4rem; }
+.hero .logo { margin: 1rem auto 1.2rem; max-width: 13rem; }
+.hero h1 { font-size: clamp(2rem, 7vw, 3.2rem); margin: .2rem 0 .8rem; letter-spacing: -.02em; }
+.hero .lead { font-size: 1.15rem; max-width: 38rem; margin: 0 auto 1.6rem; }
+.hero .store { margin: 0; }
+.hero .store a { font-size: 1.1rem; padding: .8rem 1.7rem; }
+.badges { display: flex; flex-wrap: wrap; gap: .5rem; justify-content: center; margin: 1.3rem 0 0; padding: 0; list-style: none; }
+.badges li { padding: .25rem .85rem; border: 1px solid var(--linie); border-radius: 99px; font-size: .9rem; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1rem; margin: 1.2rem 0; padding: 0; list-style: none; }
+.cards li { padding: 1rem 1.1rem; border: 1px solid var(--linie); border-radius: 1rem; background: color-mix(in srgb, var(--akzent) 7%, var(--grund)); }
+.cards h3 { margin: .1rem 0 .4rem; font-size: 1.05rem; color: var(--akzent); }
+.cards p { margin: 0; font-size: .98rem; }
+main.home > h2 { margin-top: 2.6rem; }
