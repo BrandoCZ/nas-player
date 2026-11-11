@@ -67,3 +67,43 @@ main.home { max-width: 64rem; }
 .guidelist { list-style: none; padding: 0; }
 .guidelist li { margin: .5rem 0; }
 @media (max-width: 40rem) { .appicon { width: 6.5rem; height: 6.5rem; } .facts div { border-right: 0; } }
+
+/* Startseite Variante A */
+.heroband { background: linear-gradient(160deg, #4B7592 0%, #2B4659 100%); color: #FFFFFF; }
+.heroband .inner { max-width: 64rem; margin: 0 auto; padding: 0 1.25rem; box-sizing: border-box; }
+.heroband nav { border-bottom: 0; padding: 1.2rem 0; }
+.heroband a { color: #FFFFFF; }
+.heroband .lang a[aria-current] { text-decoration: none; }
+.herogrid { display: flex; flex-wrap: wrap; align-items: center; gap: 2rem 3rem; padding: 2rem 0 1.6rem; }
+.herotext { flex: 1 1 24rem; min-width: 0; display: flex; flex-direction: column; gap: 1.2rem; }
+.appicon-s { width: 5.5rem; height: 5.5rem; border-radius: 22.4%; box-shadow: 0 6px 20px rgba(0, 0, 0, .3); }
+.heroband h1 { margin: 0; font-size: clamp(2.2rem, 7vw, 3.6rem); line-height: 1.05; letter-spacing: -.025em; }
+.heroband .lead { margin: 0; font-size: 1.2rem; line-height: 1.45; color: #E3EDF4; max-width: 32rem; }
+.getit { margin: .4rem 0 0; display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.2rem; }
+.appbadge { display: inline-block; padding: 0; line-height: 0; }
+.appbadge img { height: 56px; width: auto; display: block; }
+.getit .note { font-size: .9rem; color: #E3EDF4; }
+.heroshots { flex: 1 1 20rem; min-width: 0; display: flex; justify-content: center; gap: 1.2rem; align-items: flex-start; }
+.heroshots img { height: 26rem; width: auto; max-width: 48%; border-radius: 1.4rem; box-shadow: 0 20px 50px rgba(0, 0, 0, .35); }
+.heroshots img + img { margin-top: 3rem; }
+.pills { display: flex; flex-wrap: wrap; gap: .6rem; list-style: none; margin: 0; padding: 0 0 2.2rem; }
+.pills li { display: inline-flex; align-items: center; gap: .5rem; padding: .5rem 1rem; background: rgba(16, 22, 28, .38); border: 1px solid rgba(255, 255, 255, .55); border-radius: 999px; font-size: 1rem; font-weight: 600; }
+.threescreens > h2 { margin: 0 0 .4rem; font-size: clamp(1.7rem, 4vw, 2.3rem); letter-spacing: -.015em; }
+.threescreens .sub { margin: 0 0 1.6rem; opacity: .85; max-width: 40rem; }
+.devcard { display: flex; flex-wrap: wrap; gap: 1.6rem; padding: 1.6rem; margin-bottom: 1.6rem; border: 1px solid var(--linie); border-radius: 1.6rem; background: color-mix(in srgb, var(--akzent) 5%, var(--grund)); }
+.devtext { flex: 1 1 16rem; min-width: 0; }
+.devlabel { font-size: .8rem; letter-spacing: .08em; font-weight: 700; color: var(--akzent); }
+.devtext h3 { margin: .4rem 0 .7rem; font-size: 1.6rem; line-height: 1.15; }
+.devtext p { margin: 0; line-height: 1.55; }
+.devcard .shots { flex: 2 1 26rem; min-width: 0; margin: 0; padding: 0 0 .5rem; gap: 1rem; }
+.devcard .shots img { height: 24rem; width: auto; border-radius: 1.2rem; }
+.devcard .shots-ipad img { height: 19rem; }
+.steps { margin-top: 3rem; }
+.steps h2 { font-size: clamp(1.7rem, 4vw, 2.3rem); letter-spacing: -.015em; margin: 0 0 1.2rem; }
+.steps ol { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1.2rem; list-style: none; margin: 0; padding: 0; }
+.steps li { padding: 1.4rem; border-radius: 1.2rem; background: color-mix(in srgb, var(--akzent) 9%, var(--grund)); }
+.steps .num { display: block; font-size: 2.2rem; font-weight: 700; color: var(--akzent); }
+.steps h3 { margin: .2rem 0 .5rem; font-size: 1.2rem; }
+.steps li p { margin: 0 0 .5rem; line-height: 1.5; }
+.steps .req { margin-top: 1.2rem; font-size: .95rem; opacity: .85; }
+@media (max-width: 40rem) { .heroshots img { height: 17rem; } .appicon-s { width: 4.5rem; height: 4.5rem; } .devcard { padding: 1rem; } .devcard .shots img { height: 19rem; } }
