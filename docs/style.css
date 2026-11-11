@@ -30,3 +30,40 @@ main.home > h2 { margin-top: 2.6rem; }
 .shots { display: flex; gap: 1rem; overflow-x: auto; scroll-snap-type: x mandatory; padding: 1.6rem 0 .8rem; margin: 0 -1.25rem; padding-left: 1.25rem; padding-right: 1.25rem; scrollbar-width: thin; scroll-padding-left: 1.25rem; }
 .shots img { flex: 0 0 auto; height: 27rem; width: auto; border-radius: 1.4rem; border: 1px solid var(--linie); scroll-snap-align: start; }
 @media (max-width: 40rem) { .shots img { height: 22rem; } }
+
+/* Startseite im Stil der App-Store-Produktseite */
+main.home { max-width: 64rem; }
+.appheader { display: flex; flex-wrap: wrap; align-items: center; gap: 1.6rem 2rem; padding: 2.4rem 0 1.6rem; }
+.appicon { width: 9rem; height: 9rem; border-radius: 22.4%; box-shadow: 0 6px 24px rgba(16, 22, 28, .18); }
+.appheader h1 { margin: 0; font-size: clamp(2rem, 6vw, 3rem); line-height: 1.1; letter-spacing: -.02em; }
+.appheader .sub { margin: .4rem 0 0; font-size: 1.2rem; max-width: 34rem; opacity: .9; }
+.appheader .store { margin: 1rem 0 0; display: flex; flex-wrap: wrap; align-items: center; gap: .8rem 1rem; }
+.appheader .store a { font-size: 1.05rem; padding: .7rem 1.5rem; }
+.appheader .note { font-size: .9rem; opacity: .75; }
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr)); border-top: 1px solid var(--linie); border-bottom: 1px solid var(--linie); margin-top: .8rem; }
+.facts div { padding: 1rem .6rem; text-align: center; border-right: 1px solid var(--linie); }
+.facts div:last-child { border-right: 0; }
+.facts span { display: block; font-size: .72rem; letter-spacing: .06em; opacity: .7; }
+.facts strong { display: block; font-size: 1.15rem; margin-top: .25rem; }
+.preview { position: relative; margin-top: 2.4rem; }
+.preview > input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.previewhead { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; }
+.previewhead h2 { margin: 0; font-size: 1.6rem; }
+.seg { display: inline-flex; padding: 3px; gap: 2px; border-radius: .7rem; background: color-mix(in srgb, var(--akzent) 14%, var(--grund)); }
+.seg label { cursor: pointer; padding: .55rem 1.2rem; min-height: 1.4rem; border-radius: .55rem; font-weight: 600; font-size: .95rem; }
+#dev-iphone:checked ~ .previewhead label[for="dev-iphone"], #dev-ipad:checked ~ .previewhead label[for="dev-ipad"],
+#dev-carplay:checked ~ .previewhead label[for="dev-carplay"] { background: var(--grund); box-shadow: 0 1px 3px rgba(16, 22, 28, .25); }
+.preview > input:focus-visible ~ .previewhead .seg { outline: 2px solid var(--akzent); outline-offset: 2px; }
+.preview .line, .preview .shots { display: none; }
+.preview .line { margin: .8rem 0 0; opacity: .85; max-width: 44rem; }
+#dev-iphone:checked ~ .line-iphone, #dev-ipad:checked ~ .line-ipad, #dev-carplay:checked ~ .line-carplay { display: block; }
+#dev-iphone:checked ~ .shots-iphone, #dev-ipad:checked ~ .shots-ipad, #dev-carplay:checked ~ .shots-carplay { display: flex; }
+.preview .shots { margin: 0; padding: 1.4rem 0 .8rem; }
+.shots-ipad img { height: 24rem; }
+.desc { display: flex; flex-wrap: wrap; gap: 2.4rem 3rem; margin-top: 1rem; }
+.desc > div { flex: 1 1 18rem; min-width: 0; }
+.desc > div:first-child { flex: 2 1 28rem; }
+.featlist, .guidelist { padding-left: 1.2rem; }
+.guidelist { list-style: none; padding: 0; }
+.guidelist li { margin: .5rem 0; }
+@media (max-width: 40rem) { .appicon { width: 6.5rem; height: 6.5rem; } .facts div { border-right: 0; } }
