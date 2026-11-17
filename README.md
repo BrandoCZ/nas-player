@@ -22,6 +22,7 @@ NAS Player is an iPhone and iPad app that plays your own music collection (MP3 a
 - Favorites sync with your NAS (optional), AirPlay, song lyrics, and playback speed for audiobooks
 - Native iPad app with sidebar, two-column album page and Split View (since version 4.0)
 - Downloads continue while the iPhone is locked, “Play Next” and an editable queue (since version 4.1)
+- Favorites page, quick actions on the app icon, two-factor sign-in and a Dutch translation (since version 4.2)
 - CarPlay and Siri support
 - Available in English, German, Czech, Spanish, Italian, French and Dutch
 - No ads, no tracking, no accounts. Everything stays on your iPhone or iPad.
