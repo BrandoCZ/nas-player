@@ -140,7 +140,7 @@ html { scroll-padding-top: 5.5rem; }
 .getit .note { font-size: .9rem; color: #e6eef4; }
 .heroshots { position: relative; isolation: isolate; display: flex; justify-content: center; align-items: flex-start; padding-bottom: 1rem; }
 .heroshots::before { content: ""; position: absolute; z-index: -1; inset: 0 -15% -10% -15%; background: radial-gradient(circle, rgba(141, 180, 208, .42) 0%, rgba(141, 180, 208, 0) 62%); }
-.heroshots img { width: clamp(11rem, 18vw, 21.5rem); height: auto; aspect-ratio: 600 / 1303; object-fit: cover; border-radius: clamp(1.4rem, 2.1vw, 2.5rem); box-shadow: 0 26px 60px rgba(10, 24, 34, .45); }
+.heroshots img { width: min(clamp(11rem, 18vw, 21.5rem), calc((100svh - 15rem) / 2.45)); height: auto; aspect-ratio: 600 / 1303; object-fit: cover; border-radius: clamp(1.4rem, 2.1vw, 2.5rem); box-shadow: 0 26px 60px rgba(10, 24, 34, .45); }
 .heroshots img + img { margin: clamp(2rem, 4.5vw, 4.6rem) 0 0 -1.2rem; }
 @media (max-width: 899px) {
   .herogrid { grid-template-columns: minmax(0, 1fr); align-content: space-evenly; justify-items: start; gap: 1.5rem; padding-top: .75rem; }
@@ -163,7 +163,7 @@ html { scroll-padding-top: 5.5rem; }
 }
 
 /* Leiste unten: Vorteile in Pillen, Pfeil zu den Funktionen */
-.herostrip { display: flex; align-items: center; gap: 1rem; box-sizing: border-box; padding: 1rem max(var(--pad), env(safe-area-inset-right)) 1rem max(var(--pad), env(safe-area-inset-left)); background: rgba(16, 32, 44, .2); border-top: 1px solid rgba(255, 255, 255, .18); }
+.herostrip { display: flex; align-items: center; gap: 1rem; box-sizing: border-box; padding: 1.25rem max(var(--pad), env(safe-area-inset-right)) max(1.5rem, calc(env(safe-area-inset-bottom) + 1rem)) max(var(--pad), env(safe-area-inset-left)); background: rgba(16, 32, 44, .2); border-top: 1px solid rgba(255, 255, 255, .18); }
 .pills { flex: 1; display: flex; flex-wrap: wrap; gap: .6rem .75rem; }
 .pills li { display: inline-flex; align-items: center; gap: .5rem; padding: .65em 1.3em; background: rgba(16, 32, 44, .4); border: 1px solid rgba(255, 255, 255, .32); border-radius: 999px; font-size: clamp(.875rem, .9vw, 1.0625rem); font-weight: 600; }
 .pills svg { width: 1.1em; height: 1.1em; flex: none; }
@@ -179,6 +179,17 @@ html { scroll-padding-top: 5.5rem; }
 @media (max-width: 359px) {
   .heroshots img { width: 40vw; }
   .heroshots img + img { margin-left: .5rem; }
+}
+
+/* Breite, aber niedrige Fenster (z. B. iPad quer in Safari mit Leiste): kompakter */
+@media (min-width: 900px) and (min-height: 521px) and (max-height: 700px) {
+  .heroband { --headh: 3.25rem; }
+  .herostrip { padding-top: .9rem; }
+  .heroband h1 { font-size: max(2.2rem, min(4.4vw, 3.4rem, calc(45vw / (var(--chars) * .56)))); }
+  .heroband .lead { font-size: 1rem; }
+  .herotext { gap: .9rem; }
+  .appbadge img { height: 2.75rem; }
+  .herogrid { padding-bottom: .5rem; }
 }
 
 /* Smartphone quer: sehr niedrig, daher kompakt und ohne Leiste */
