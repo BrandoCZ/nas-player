@@ -77,8 +77,11 @@ main.home { max-width: 64rem; }
 .heroband.homeA .herogrid { flex: 1; align-content: center; }
 /* Hochformat (iPad): Inhalt gleichmäßig über die Höhe verteilen, Bilder größer, damit keine große Leere entsteht */
 @media (orientation: portrait) and (min-width: 40rem) {
-  .heroband.homeA .herogrid { align-content: space-evenly; padding-top: 1rem; }
-  .heroband.homeA .heroshots img { width: min(48%, 16rem); }
+  .heroband.homeA .herogrid { flex-direction: column; flex-wrap: nowrap; align-items: stretch; justify-content: space-evenly; padding: 1rem 0; }
+  .heroband.homeA .herotext, .heroband.homeA .heroshots { flex: 0 0 auto; }
+  .heroband.homeA .heroshots img { width: min(44%, 16svh, 20rem); }
+  .heroband.homeA h1 { font-size: clamp(2.6rem, 8vw, 4.4rem); }
+  .heroband.homeA .lead { font-size: 1.3rem; max-width: 36rem; }
 }
 .heroband nav { border-bottom: 0; padding: 1.2rem 0; }
 .heroband a { color: #FFFFFF; }
