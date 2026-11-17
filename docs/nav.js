@@ -1,4 +1,4 @@
-// Startseite: Menü und Sprachwahl (details) schließen bei Klick daneben und mit Esc.
+// Kopfleiste aller Seiten: Menü und Sprachwahl (details) schließen bei Klick daneben und mit Esc.
 // Ohne JavaScript bleibt alles bedienbar; das Skript ergänzt nur den Komfort.
 (function () {
   var open = function () { return document.querySelectorAll('.heroband details[open]'); };

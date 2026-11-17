@@ -71,7 +71,7 @@ main.home { max-width: 64rem; }
 /* Startseite: erster Bildschirm (Entwurf „Hero“, 17.11.2026)
    Der hellere Blauton füllt immer mindestens den ganzen Bildschirm (svh = sichtbare Höhe in Safari). */
 .heroband { position: relative; background: linear-gradient(165deg, #4b7592 0%, #3a5d75 45%, #274052 100%); color: #fff; --pad: clamp(1.25rem, 6vw, 7.5rem); --headh: 3.75rem; }
-.heroband.homeA { min-height: 100vh; min-height: 100svh; display: flex; flex-direction: column; }
+.heroband.homeA { min-height: 100vh; min-height: 100svh; display: flex; flex-direction: column; overflow-x: hidden; overflow-x: clip; }
 .heroband a { color: #fff; text-decoration: none; }
 .heroband a:hover { text-decoration: underline; }
 .heroband a:focus-visible, .heroband summary:focus-visible { outline: 3px solid #fff; outline-offset: 3px; border-radius: 6px; }
@@ -117,12 +117,18 @@ main.home { max-width: 64rem; }
   .navlinks { display: flex; }
   .lang-pop { display: block; }
 }
-@media (min-width: 1000px) and (min-height: 521px) {
+@media (min-width: 1100px) and (min-height: 521px) {
   .lang-pop { display: none; }
   .lang-inline { display: flex; }
 }
 
 @media (max-width: 999px) { .heroband { --pad: clamp(1.25rem, 4vw, 2.5rem); } }
+/* Schmale Kopfleiste der Unterseiten: bleibt oben stehen, gleiche Bausteine wie die Startseite */
+html { scroll-padding-top: 5.5rem; }
+.heroband.slim { position: sticky; top: 0; z-index: 50; background: linear-gradient(90deg, #4b7592 0%, #3a5d75 100%); box-shadow: 0 2px 14px rgba(10, 24, 34, .25); }
+.heroband.slim .hero-inner { flex: none; }
+.heroband.slim .menu-panel { position: fixed; }
+.navlinks a[aria-current="page"], .menu-panel .links a[aria-current="page"] { text-decoration: underline; text-underline-offset: .45em; text-decoration-thickness: 2px; }
 /* Inhalt: Text links, Bilder rechts; unter 900 px untereinander */
 .herogrid { flex: 1; display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); align-items: center; gap: 2rem clamp(1.5rem, 3vw, 3rem); padding: 1rem 0 1.5rem; }
 .herotext { display: flex; flex-direction: column; align-items: flex-start; gap: clamp(1.1rem, 1.6vw, 1.9rem); min-width: 0; }
@@ -141,9 +147,9 @@ main.home { max-width: 64rem; }
   .heroband h1 { font-size: max(2rem, min(10.8vw, 4rem, calc((100vw - 2.5rem) / (var(--chars) * .56)))); line-height: 1; }
   .heroband .lead { font-size: clamp(1rem, 2.3vw, 1.2rem); max-width: 37.5rem; }
   .heroshots { justify-self: center; }
-  .heroshots img { width: clamp(9rem, 28vw, 14.5rem); }
+  .heroshots img { width: min(clamp(9rem, 28vw, 14.5rem), 19svh); }
 }
-@media (max-width: 599px) and (min-height: 641px) {
+@media (max-width: 599px) and (min-height: 641px), (min-width: 600px) and (max-width: 899px) and (min-height: 641px) and (max-height: 1000px) {
   .heroband.homeA { height: 100vh; height: 100svh; }
   .hero-inner, .herogrid { min-height: 0; }
   .herogrid { grid-template-rows: auto minmax(0, 1fr); align-content: stretch; padding-bottom: 0; }
@@ -165,9 +171,14 @@ main.home { max-width: 64rem; }
 @media (max-width: 899px) { .pills { justify-content: center; } .scrollcue { display: none; } .herostrip { padding-top: .75rem; padding-bottom: .75rem; } }
 @media (max-width: 599px) {
   .herostrip { padding-bottom: max(.75rem, env(safe-area-inset-bottom)); }
-  .pills { justify-content: center; flex-wrap: nowrap; gap: .5rem .75rem; }
+  .pills { justify-content: center; flex-wrap: wrap; gap: .5rem .75rem; }
   .pills li { padding: 0; background: none; border: 0; font-size: .78rem; gap: .35rem; white-space: nowrap; }
   .pills li:nth-child(n+4) { display: none; }
+}
+
+@media (max-width: 359px) {
+  .heroshots img { width: 40vw; }
+  .heroshots img + img { margin-left: .5rem; }
 }
 
 /* Smartphone quer: sehr niedrig, daher kompakt und ohne Leiste */
@@ -207,3 +218,6 @@ main.home { max-width: 64rem; }
 .steps li p { margin: 0 0 .5rem; line-height: 1.5; }
 .steps .req { margin-top: 1.2rem; font-size: .95rem; opacity: .85; }
 @media (max-width: 40rem) { .devcard { padding: 1rem; } .devcard .shots img { height: 19rem; } }
+
+/* Lange Wörter in Überschriften (z. B. „Datenschutzerklärung“) auf sehr schmalen Geräten trennen */
+main h1, main h2 { overflow-wrap: break-word; hyphens: auto; }
