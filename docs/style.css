@@ -76,7 +76,7 @@ html:has(.heroband) { background-color: #4b7592; }
 :root { --headh: 3.75rem; }
 .heroband { position: relative; background: linear-gradient(165deg, #4b7592 0%, #3a5d75 45%, #274052 100%); color: #fff; --pad: clamp(1.25rem, 6vw, 7.5rem); --headh: 3.75rem; }
 /* Blau bis zur vollen Bildschirmhöhe (lvh, auch unter der schwebenden Safari-Leiste); der Inhalt bleibt in der sichtbaren Höhe (svh). */
-.heroband.homeA { min-height: 100vh; min-height: 100svh; box-sizing: border-box; padding-bottom: 1.75rem; display: flex; flex-direction: column; overflow-x: hidden; overflow-x: clip; }
+.heroband.homeA { min-height: 100vh; min-height: 100svh; box-sizing: border-box; display: flex; flex-direction: column; overflow-x: hidden; overflow-x: clip; }
 .heroband a { color: #fff; text-decoration: none; }
 .heroband a:hover { text-decoration: underline; }
 .heroband a:focus-visible, .heroband summary:focus-visible { outline: 3px solid #fff; outline-offset: 3px; border-radius: 6px; }
@@ -246,5 +246,5 @@ html:has(.heroband.slim) { scroll-padding-top: calc(var(--headh) + 1rem + env(sa
 /* Lange Wörter in Überschriften (z. B. „Datenschutzerklärung“) auf sehr schmalen Geräten trennen */
 main h1, main h2 { overflow-wrap: break-word; hyphens: auto; }
 
-/* Unterkante des ersten Bildschirms wie bei N26: der helle Inhalt schiebt sich mit runden Ecken ins Bild und schaut über Safaris unterer Leiste hervor */
-.heroband.homeA::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1.75rem; background: var(--grund); border-radius: 1.75rem 1.75rem 0 0; pointer-events: none; }
+/* Unterkante des ersten Bildschirms wie bei N26: Handy: der helle Inhalt beginnt mit gerader Kante und schaut über Safaris unterer Leiste hervor (Höhe oben). Tablet und Desktop: der erste Bereich füllt den ganzen Bildschirm, unten nichts Weißes. */
+@media (min-width: 700px) and (min-height: 700px) { .heroband.homeA { height: 100vh; height: 100lvh; min-height: 100vh; min-height: 100lvh; } }
