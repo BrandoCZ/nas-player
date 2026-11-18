@@ -132,6 +132,10 @@ html { scroll-padding-top: 5.5rem; }
 .heroband.slim { position: sticky; top: 0; z-index: 50; background: linear-gradient(90deg, #4b7592 0%, #3a5d75 100%); box-shadow: 0 2px 14px rgba(10, 24, 34, .25); }
 .heroband.slim .hero-inner { flex: none; }
 .heroband.slim .menu-panel { position: fixed; }
+/* Startseite: Kopfleiste fest am oberen Rand (Safari färbt die Statusleiste nach diesem Element) */
+.heroband.homeA .sitehead { position: fixed; top: 0; left: 0; right: 0; z-index: 40; box-sizing: border-box; padding: 0 max(var(--pad), env(safe-area-inset-right)) 0 max(var(--pad), env(safe-area-inset-left)); background: #4b7592; }
+.heroband.homeA .hero-inner { padding-top: var(--headh); }
+.heroband.homeA .menu-panel { position: fixed; }
 .navlinks a[aria-current="page"], .menu-panel .links a[aria-current="page"] { text-decoration: underline; text-underline-offset: .45em; text-decoration-thickness: 2px; }
 /* Inhalt: Text links, Bilder rechts; unter 900 px untereinander */
 .herogrid { flex: 1; display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); align-items: center; gap: 2rem clamp(1.5rem, 3vw, 3rem); padding: 1rem 0 1.5rem; }
