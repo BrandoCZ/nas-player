@@ -68,6 +68,9 @@ main.home { max-width: 64rem; }
 .guidelist li { margin: .5rem 0; }
 @media (max-width: 40rem) { .appicon { width: 6.5rem; height: 6.5rem; } .facts div { border-right: 0; } }
 
+/* Statusleiste und Überzug oben/unten in Safari: auf der Startseite im Blau des Kopfbereichs, nicht Weiß */
+html:has(.heroband.homeA) { background-color: #4b7592; }
+
 /* Startseite: erster Bildschirm (Entwurf „Hero“, 17.11.2026)
    Der hellere Blauton füllt immer mindestens den ganzen Bildschirm (svh = sichtbare Höhe in Safari). */
 .heroband { position: relative; background: linear-gradient(165deg, #4b7592 0%, #3a5d75 45%, #274052 100%); color: #fff; --pad: clamp(1.25rem, 6vw, 7.5rem); --headh: 3.75rem; }
