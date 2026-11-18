@@ -153,7 +153,7 @@ html { scroll-padding-top: 5.5rem; }
   .heroband.homeA { height: 100vh; height: 100svh; }
   .hero-inner, .herogrid { min-height: 0; }
   .herogrid { grid-template-rows: auto minmax(0, 1fr); align-content: stretch; padding-bottom: 0; }
-  .heroshots { min-height: 0; overflow: hidden; }
+  .heroshots { min-height: 0; overflow: hidden; align-self: stretch; }
 }
 @media (max-width: 599px) and (max-height: 640px) { .heroshots { max-height: 20rem; overflow: hidden; } }
 @media (max-width: 599px) {
