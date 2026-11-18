@@ -10,3 +10,11 @@
     open().forEach(function (d) { d.open = false; var s = d.querySelector('summary'); if (s) s.focus(); });
   });
 })();
+
+// Seitenfuß: ab Tablet-Breite stehen die Linkgruppen offen nebeneinander, auf dem Handy klappen sie auf.
+(function () {
+  var mq = window.matchMedia('(min-width: 700px)');
+  var sync = function () { document.querySelectorAll('.sitefoot .fg').forEach(function (d) { d.open = mq.matches; }); };
+  sync();
+  if (mq.addEventListener) mq.addEventListener('change', sync);
+})();

@@ -248,3 +248,39 @@ main h1, main h2 { overflow-wrap: break-word; hyphens: auto; }
 
 /* Unterkante des ersten Bildschirms wie bei N26: Handy: der helle Inhalt beginnt mit gerader Kante und schaut über Safaris unterer Leiste hervor (Höhe oben). Tablet und Desktop: der erste Bereich füllt den ganzen Bildschirm, unten nichts Weißes. */
 @media (min-width: 700px) and (min-height: 700px) { .heroband.homeA { height: 100vh; height: 100lvh; min-height: 100vh; min-height: 100lvh; } }
+
+/* Seitenfuß wie bei n26.com: heller Block mit Linkgruppen, darunter dunkler Fuß */
+.sitefoot { margin-top: 3rem; padding: 0; border: 0; opacity: 1; font-size: .95rem; }
+.sitefoot a { color: inherit; text-decoration: none; }
+.sitefoot a:hover { text-decoration: underline; }
+.foot-in { margin: 0 auto; padding: 0 max(clamp(1.25rem, 6vw, 7.5rem), env(safe-area-inset-right)) 0 max(clamp(1.25rem, 6vw, 7.5rem), env(safe-area-inset-left)); box-sizing: border-box; }
+.foot-top { background: color-mix(in srgb, var(--akzent) 9%, var(--grund)); border-radius: 1.75rem 1.75rem 0 0; padding: .75rem 0; }
+.fg { border-bottom: 1px solid var(--linie); }
+.fg:last-child { border-bottom: 0; }
+.fg summary { display: flex; align-items: center; justify-content: space-between; min-height: 56px; font-weight: 700; font-size: 1.05rem; letter-spacing: .02em; text-transform: uppercase; cursor: pointer; list-style: none; }
+.fg summary::-webkit-details-marker { display: none; }
+.fg summary::after { content: ""; width: .55rem; height: .55rem; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg) translateY(-.15rem); transition: transform .15s; }
+.fg[open] summary::after { transform: rotate(-135deg); }
+.fg ul { list-style: none; margin: 0; padding: 0 0 .9rem; }
+.fg li a { display: block; padding: .5rem 0; }
+.foot-bottom { background: #274052; color: #eaf1f6; padding: 1.5rem 0 max(2rem, env(safe-area-inset-bottom)); }
+.foot-row { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.foot-icons { display: flex; gap: 1rem; }
+.foot-icons a { display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; }
+.foot-icons a:hover { background: rgba(255, 255, 255, .12); }
+.foot-bottom hr { border: 0; border-top: 1px solid rgba(255, 255, 255, .22); margin: 1.25rem 0; }
+.foot-legal { margin: 0; font-size: .82rem; line-height: 1.5; color: #c9d8e3; }
+@media (prefers-color-scheme: dark) { .foot-top { background: color-mix(in srgb, var(--akzent) 12%, var(--grund)); } .foot-bottom { background: #1c2e3b; } }
+@media (min-width: 700px) {
+  .foot-top { padding: 2.5rem 0; }
+  .foot-top .foot-in { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+  .fg { border: 0; }
+  .fg summary { min-height: 0; margin-bottom: .75rem; pointer-events: none; font-size: .85rem; opacity: .75; }
+  .fg summary::after { display: none; }
+}
+/* Hintergrund hinter der Seite (auch unter Safaris unterer Leiste und beim Überziehen) hat die Farbe des Fußes */
+html:has(.sitefoot) { background-color: #274052; }
+@media (prefers-color-scheme: dark) { html:has(.sitefoot) { background-color: #1c2e3b; } }
+body:has(.sitefoot) { background: linear-gradient(to bottom, var(--grund) calc(100% - 8rem), #274052 calc(100% - 8rem)); }
+@media (prefers-color-scheme: dark) { body:has(.sitefoot) { background: linear-gradient(to bottom, var(--grund) calc(100% - 8rem), #1c2e3b calc(100% - 8rem)); } }
+
