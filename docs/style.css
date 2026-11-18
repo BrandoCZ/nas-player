@@ -71,7 +71,8 @@ main.home { max-width: 64rem; }
 /* Startseite: erster Bildschirm (Entwurf „Hero“, 17.11.2026)
    Der hellere Blauton füllt immer mindestens den ganzen Bildschirm (svh = sichtbare Höhe in Safari). */
 .heroband { position: relative; background: linear-gradient(165deg, #4b7592 0%, #3a5d75 45%, #274052 100%); color: #fff; --pad: clamp(1.25rem, 6vw, 7.5rem); --headh: 3.75rem; }
-.heroband.homeA { min-height: 100vh; min-height: 100svh; display: flex; flex-direction: column; overflow-x: hidden; overflow-x: clip; }
+/* Blau bis zur vollen Bildschirmhöhe (lvh, auch unter der schwebenden Safari-Leiste); der Inhalt bleibt in der sichtbaren Höhe (svh). */
+.heroband.homeA { min-height: 100vh; min-height: 100lvh; box-sizing: border-box; padding-bottom: calc(100lvh - 100svh); display: flex; flex-direction: column; overflow-x: hidden; overflow-x: clip; }
 .heroband a { color: #fff; text-decoration: none; }
 .heroband a:hover { text-decoration: underline; }
 .heroband a:focus-visible, .heroband summary:focus-visible { outline: 3px solid #fff; outline-offset: 3px; border-radius: 6px; }
@@ -150,7 +151,7 @@ html { scroll-padding-top: 5.5rem; }
   .heroshots img { width: min(clamp(9rem, 28vw, 14.5rem), 19svh); }
 }
 @media (max-width: 599px) and (min-height: 641px), (min-width: 600px) and (max-width: 899px) and (min-height: 641px) and (max-height: 1000px) {
-  .heroband.homeA { height: 100vh; height: 100svh; }
+  .heroband.homeA { height: 100vh; height: 100lvh; }
   .hero-inner, .herogrid { min-height: 0; }
   .herogrid { grid-template-rows: auto minmax(0, 1fr); align-content: stretch; padding-bottom: 0; }
   .heroshots { min-height: 0; overflow: hidden; align-self: stretch; }
