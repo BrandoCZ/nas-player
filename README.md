@@ -1,6 +1,6 @@
 # NAS Player
 
-**Your music. From your NAS.**
+**Your music. From your Synology NAS.**
 
 NAS Player is an iPhone and iPad app that plays your own music collection (MP3, M4A, FLAC, WAV, AIFF and AAC) from a Synology NAS running Audio Station. Stream your whole library, download the albums and artists you want for offline listening, and keep listening when you have no network. It also works with CarPlay and Siri.
 
